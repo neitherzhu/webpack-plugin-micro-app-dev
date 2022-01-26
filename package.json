@@ -1,6 +1,6 @@
 {
   "name": "webpack-plugin-micro-app-dev",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "> 开发子应用时，获取主应用的一些全局依赖库与样式",
   "main": "index.js",
   "scripts": {
