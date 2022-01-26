@@ -1,4 +1,5 @@
 const axios = require('axios')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const cheerio = require('cheerio')
 const URL = require('url')
 const pluginName = 'MicroAppDev'
