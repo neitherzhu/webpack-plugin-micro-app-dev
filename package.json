@@ -1,6 +1,6 @@
 {
   "name": "webpack-plugin-micro-app-dev",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "> 开发子应用时，获取主应用的一些全局依赖库与样式",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,9 @@
     "url": "https://github.com/neitherzhu/webpack-plugin-micro-app-dev/issues"
   },
   "homepage": "https://github.com/neitherzhu/webpack-plugin-micro-app-dev#readme",
+  "peerDependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  },
   "dependencies": {
     "axios": "^0.24.0",
     "cheerio": "*"

@@ -62,19 +62,16 @@ class MicroAppDevWebpackPlugin {
 
   apply (compiler) {
     compiler.hooks.compilation.tap(pluginName, compilation => {
-      compilation.hooks.htmlWebpackPluginBeforeHtmlProcessing.tapAsync(
+      HtmlWebpackPlugin.getHooks(compilation).beforeEmit.tapAsync(
         pluginName,
         (data, cb) => {
           getExternalStatics(this.options.mainAppUrl)
             .then(([srcs, links]) => {
-              console.log(links, srcs)
-
               let str = ''
 
               str += links
                 .map(x => `<link rel="stylesheet" href="${x}"/>`)
                 .join('')
-              str += `<script>var IS_DEV = true</script>`
               str += srcs.map(x => `<script src="${x}"></script>`).join('')
 
               data.html = data.html.replace(/<\/head>/, head => `${str}${head}`)
