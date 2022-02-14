@@ -16,7 +16,7 @@ function isExternal (url) {
 
   if (parts.length <= 2) return true
 
-  if (['min', 'source'].includes(parts[1])) return true
+  if (['min', 'source'].includes(parts.slice(-2)[0])) return true
 
   return false
 }
